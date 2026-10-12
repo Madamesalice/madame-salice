@@ -180,12 +180,18 @@
       border: 1px solid #e2d6c4;
     }
 
-    .card img {
-      display: block;
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-    }
+.card img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card img.logo-card {
+    object-fit: contain;
+    background: var(--paper);
+    padding: 8px;
+}
 
     .card-copy { padding: 20px; }
 
@@ -474,7 +480,7 @@
         </article>
 
         <article class="card">
-           <img src="./bordo%20logo.png" alt="Madame Salice bordo ve altın logo" loading="lazy">
+           <img class="logo-card" src="./bordo%20logo.png" alt="Madame Salice bordo ve altın logo" loading="lazy">
           <div class="card-copy">
             <h2>Marka Felsefesi</h2>
             <p>Değerlerimiz, ilham kaynaklarımız ve yolculuğumuz.</p>
