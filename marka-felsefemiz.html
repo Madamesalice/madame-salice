@@ -1,273 +1,270 @@
 
 <!DOCTYPE html>
 <html lang="tr">
-  <link rel="icon" type="image/png" href="./bordo%20logo.png">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Marka Felsefemiz | Madame Salice</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root {
-  --cream: #f5efe5;
-  --paper: #fffaf2;
-  --burgundy: #590f1c;
-  --gold: #b6975b;
-  --ink: #33231c;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  color: var(--ink);
-  background: var(--cream);
-  font-family: "Cormorant Garamond", Georgia, serif;
-}
-.top {
-  padding: 22px 6%;
-  border-bottom: 1px solid #cbbda7;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-.brand {
-  color: var(--burgundy);
-  text-decoration: none;
-  font-size: 25px;
-  letter-spacing: 3px;
-}
-.back {
-  color: var(--burgundy);
-  font: 11px "Montserrat", sans-serif;
-  text-decoration: none;
-  letter-spacing: 1px;
-}
-.hero {
-  min-height: 500px;
-  padding: 75px 8%;
-  display: flex;
-  align-items: center;
-  background:
-    linear-gradient(90deg, rgba(245,239,229,.94), rgba(245,239,229,.72) 48%, rgba(245,239,229,.10)),
-    url("./madame-salice-marka-felsefemiz.png") center / cover no-repeat;
-}
-.hero-copy { max-width: 650px; }
-.eyebrow {
-  font: 11px "Montserrat", sans-serif;
-  letter-spacing: 3px;
-  color: var(--burgundy);
-  text-transform: uppercase;
-}
-h1 {
-  color: var(--burgundy);
-  font-size: clamp(44px, 6vw, 76px);
-  font-weight: 400;
-  line-height: .95;
-  margin: 22px 0;
-}
-.lead {
-  font-size: clamp(22px, 2.5vw, 30px);
-  font-style: italic;
-  line-height: 1.35;
-}
-.intro {
-  max-width: 800px;
-  padding: 65px 24px;
-  margin: auto;
-  text-align: center;
-}
-.intro p {
-  font-size: 23px;
-  line-height: 1.6;
-}
-h2 {
-  font-size: clamp(32px, 4vw, 48px);
-  font-weight: 400;
-  color: var(--burgundy);
-  margin: 0 0 20px;
-}
-.values {
-  padding: 55px 7%;
-  background: var(--paper);
-}
-.values h2, .goals h2 { text-align: center; }
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
-  margin-top: 32px;
-}
-.item {
-  border: 1px solid #d9cbb6;
-  padding: 28px 24px;
-  background: rgba(255,250,242,.8);
-}
-.item .symbol {
-  color: var(--gold);
-  font-size: 30px;
-}
-.item h3 {
-  color: var(--burgundy);
-  font-size: 27px;
-  font-weight: 500;
-  margin: 12px 0;
-}
-.item p {
-  font-size: 19px;
-  line-height: 1.5;
-  margin-bottom: 0;
-}
-.goals {
-  padding: 65px 8%;
-  max-width: 1000px;
-  margin: auto;
-}
-.goals p, .goals li {
-  font-size: 21px;
-  line-height: 1.6;
-}
-.goals li { margin-bottom: 10px; }
-.closing {
-  padding: 55px 24px;
-  background: var(--burgundy);
-  color: var(--paper);
-  text-align: center;
-}
-.closing h2 { color: var(--gold); }
-.closing p {
-  max-width: 700px;
-  margin: auto;
-  font-size: 23px;
-  line-height: 1.6;
-}
-footer {
-  padding: 22px;
-  text-align: center;
-  font: 10px "Montserrat", sans-serif;
-  letter-spacing: 1px;
-}
-@media (max-width: 700px) {
-  .hero { min-height: 440px; padding: 48px 7%; }
-  .grid { grid-template-columns: 1fr; }
-  .top { padding: 18px 5%; }
-  .brand { font-size: 19px; }
-  .intro, .values, .goals { padding: 42px 7%; }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marka Felsefemiz | Madame Salice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #f5efe5;
+      --paper: #fffaf2;
+      --burgundy: #590f1c;
+      --gold: #b6975b;
+      --black: #171411;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--black);
+      font-family: "Cormorant Garamond", Georgia, serif;
+    }
+
+    .top {
+      padding: 22px 6%;
+      border-bottom: 1px solid #cbbda7;
+      text-align: center;
+      background: var(--cream);
+    }
+
+    .top a {
+      color: var(--burgundy);
+      text-decoration: none;
+      font: 11px "Montserrat", sans-serif;
+      letter-spacing: 2px;
+    }
+
+    .hero {
+      min-height: 560px;
+      padding: 75px 8%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      background:
+        linear-gradient(90deg, rgba(245,239,229,.08), rgba(245,239,229,.25)),
+        url("./madame-salice-marka-felsefemiz-bg.png") center / cover no-repeat;
+    }
+
+    .hero-copy {
+      width: min(560px, 100%);
+      padding: 34px;
+      background: rgba(255,250,242,.78);
+      border: 1px solid rgba(182,151,91,.65);
+      text-align: center;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font: 10px "Montserrat", sans-serif;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    h1, h2 {
+      color: var(--burgundy);
+      font-weight: 400;
+    }
+
+    h1 {
+      margin: 18px 0;
+      font-size: clamp(38px, 5vw, 64px);
+      line-height: .98;
+    }
+
+    .intro {
+      font-size: 21px;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .content {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 75px 24px;
+    }
+
+    .section {
+      max-width: 760px;
+      margin: 0 auto 60px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: clamp(32px, 4vw, 46px);
+      margin: 12px 0 18px;
+    }
+
+    .section p {
+      font-size: 21px;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .values {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin: 45px 0 65px;
+    }
+
+    .value {
+      border: 1px solid #d8c9b2;
+      background: rgba(255,250,242,.7);
+      padding: 30px 22px;
+      text-align: center;
+    }
+
+    .value h3 {
+      color: var(--burgundy);
+      font-size: 29px;
+      font-weight: 500;
+      margin: 0 0 12px;
+    }
+
+    .value p {
+      font-size: 18px;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .closing {
+      padding: 55px 24px;
+      background: var(--burgundy);
+      color: var(--paper);
+      text-align: center;
+    }
+
+    .closing h2 { color: var(--paper); }
+
+    .closing p {
+      font-size: 22px;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 13px 24px;
+      border: 1px solid var(--gold);
+      color: var(--paper);
+      text-decoration: none;
+      font: 10px "Montserrat", sans-serif;
+      letter-spacing: 2px;
+    }
+
+    footer {
+      padding: 22px;
+      text-align: center;
+      color: #71675b;
+      font: 10px "Montserrat", sans-serif;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 700px) {
+      .hero {
+        min-height: 480px;
+        padding: 30px 18px;
+        background-position: center;
+      }
+
+      .hero-copy { padding: 25px 20px; }
+      .intro, .section p { font-size: 19px; }
+      .values { grid-template-columns: 1fr; }
+      .content { padding: 55px 20px; }
+    }
+  </style>
 </head>
-  <audio id="madameMusic" loop preload="auto">
-  <source src="./madame-salice-ambience.mp3" type="audio/mpeg">
-</audio>
 
-<button id="musicToggle" type="button"
-  style="position:fixed;top:18px;right:18px;z-index:99999;
-  background:#590f1c;color:#fffaf2;border:1px solid #b6975b;
-  border-radius:30px;padding:12px 18px;cursor:pointer;
-  font-family:'Montserrat',sans-serif;font-size:11px;">
-  ♫ Müziği başlat
-</button>
-
-<script>
-  const music = document.getElementById("madameMusic");
-  const toggle = document.getElementById("musicToggle");
-
-  music.volume = 0.22;
-
-  async function startMusic() {
-    try {
-      await music.play();
-      toggle.textContent = "♫ Müziği durdur";
-    } catch (error) {
-      toggle.textContent = "♫ Müziği başlat";
-    }
-  }
-
-  startMusic();
-
-  toggle.addEventListener("click", async () => {
-    if (music.paused) {
-      await startMusic();
-    } else {
-      music.pause();
-      toggle.textContent = "♫ Müziği başlat";
-    }
-  });
-</script>
 <body>
+  <header class="top">
+    <a href="./index.html">MADAME SALICE · ANA SAYFAYA DÖN</a>
+  </header>
 
-<header class="top">
-  <a class="brand" href="./index.html">MADAME SALICE</a>
-  <a class="back" href="./index.html">← ANA SAYFAYA DÖN</a>
-</header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Libera · Forte · Vera</div>
+        <h1>Bir markadan daha fazlası.</h1>
+        <p class="intro">
+          Madame Salice, kendini ifade etmenin, kendi yolunu çizmenin
+          ve hayatın küçük ayrıntılarına anlam katmanın bir yolu.
+        </p>
+      </div>
+    </section>
 
-<main>
-  <section class="hero">
-    <div class="hero-copy">
-      <div class="eyebrow">Libera · Forte · Vera</div>
-      <h1>Marka<br>Felsefemiz</h1>
-      <p class="lead">Daha estetik, daha anlamlı, daha özgür bir yaşam için…</p>
+    <div class="content">
+      <section class="section">
+        <div class="eyebrow">Marka felsefemiz</div>
+        <h2>Tarz, bir seçimden fazlasıdır.</h2>
+        <p>
+          Yaşadığımız alanlar, taşıdığımız aksesuarlar, ürettiklerimiz
+          ve hayatımıza kattığımız küçük dokunuşlar bizi anlatır.
+          Madame Salice'i bu düşünceyle kuruyoruz: sıradan görünen
+          detaylarda kişisel bir hikâye bulmak.
+        </p>
+      </section>
+
+      <div class="values">
+        <article class="value">
+          <h3>Libera</h3>
+          <p>Özgür ol. Kendi zevkini, kendi sesini ve kendi yolunu seç.</p>
+        </article>
+
+        <article class="value">
+          <h3>Forte</h3>
+          <p>Gücünü hatırla. Yeniden başlamak ve kendini ortaya koymak cesaret ister.</p>
+        </article>
+
+        <article class="value">
+          <h3>Vera</h3>
+          <p>Gerçek ol. Başkalarına benzemek yerine kendine ait olanı yaşat.</p>
+        </article>
+      </div>
+
+      <section class="section">
+        <div class="eyebrow">Neler paylaşacağız?</div>
+        <h2>Birlikte keşfedeceğimiz bir dünya.</h2>
+        <p>
+          Aksesuarlar, çantalar, el emeği ve punch işlemeler;
+          ev dekorasyonu, ilham veren mekânlar ve seyahatler;
+          ilişkiler, ayrılıklar, yeni başlangıçlar ve kız gücü…
+          Madame Salice, ürünlerin yanında fikirlerin ve deneyimlerin
+          de yer bulduğu yaşayan bir marka olacak.
+        </p>
+      </section>
+
+      <section class="section">
+        <div class="eyebrow">Hedefimiz</div>
+        <h2>İlham veren bir topluluk kurmak.</h2>
+        <p>
+          Instagram'da başlayıp zamanla kendi ürünleri, özgün içerikleri
+          ve kendine ait bir dünyası olan bir markaya dönüşmek istiyoruz.
+          Amacımız yalnızca bir şeyler sunmak değil; insanlara kendi
+          seçimlerini sevmeleri ve kendilerini özgürce ifade etmeleri
+          için ilham vermek.
+        </p>
+      </section>
     </div>
-  </section>
 
-  <section class="intro">
-    <h2>Bir markadan daha fazlası</h2>
-    <p>Madame Salice; hayatın içindeki güzellikleri fark etmek, yaratıcılığa alan açmak ve kendi hikâyemizi cesaretle kurmak üzerine doğdu. Bizim için estetik yalnızca güzel görünen değil, hissettiren ve anlam taşıyan şeydir.</p>
-  </section>
+    <section class="closing">
+      <div class="eyebrow">Madame Salice</div>
+      <h2>She feels. She dares. She creates.</h2>
+      <p>
+        Hisset. Cesaret et. Yarat.
+        Kendi hikâyeni, kendi seçimlerinle yaz.
+      </p>
+      <a class="back" href="./index.html">MADAME SALICE'İ KEŞFET →</a>
+    </section>
+  </main>
 
-  <section class="values">
-    <h2>Neye inanıyoruz?</h2>
-    <div class="grid">
-      <article class="item">
-        <div class="symbol">✧</div>
-        <h3>Yaşam tarzı</h3>
-        <p>Gündelik hayatı küçük ama özenli seçimlerle güzelleştirmeye inanıyoruz.</p>
-      </article>
-      <article class="item">
-        <div class="symbol">✿</div>
-        <h3>Yaratıcılık</h3>
-        <p>El emeğini, üretmeyi ve hayal gücünü özgün ürünlere dönüştürmeyi seviyoruz.</p>
-      </article>
-      <article class="item">
-        <div class="symbol">☼</div>
-        <h3>Özgürlük ve kız gücü</h3>
-        <p>Kendi yolunu çizen, sınırlarını keşfeden ve birbirine ilham veren kadınları destekliyoruz.</p>
-      </article>
-      <article class="item">
-        <div class="symbol">⌂</div>
-        <h3>Yaşanan mekânlar</h3>
-        <p>Evlerin ve mekânların yalnızca dekore edilmesini değil, kişiliğimizi yansıtmasını istiyoruz.</p>
-      </article>
-      <article class="item">
-        <div class="symbol">♡</div>
-        <h3>Anlamlı detaylar</h3>
-        <p>Aksesuar, çanta, takı ve dekorasyon seçimlerinin kişisel hikâyeler taşıyabileceğine inanıyoruz.</p>
-      </article>
-      <article class="item">
-        <div class="symbol">◎</div>
-        <h3>Keşif ve ilham</h3>
-        <p>Gezilerden, kültürlerden, güzel mekânlardan ve hayatın beklenmedik anlarından ilham alıyoruz.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="goals">
-    <h2>Ne yapıyoruz, ne hedefliyoruz?</h2>
-    <p>Madame Salice çatısı altında ürünleri, el emeğini, kişisel tarzı ve ilham veren yaşam fikirlerini aynı dünyada buluşturmayı hedefliyoruz.</p>
-    <ul>
-      <li>Aksesuar, çanta, punch işleme, takı ve dekorasyon alanlarında özgün fikirler geliştirmek.</li>
-      <li>Instagram ve blog içerikleriyle stil, ev dekorasyonu, geziler, mekân önerileri ve yaşam mottoları paylaşmak.</li>
-      <li>İlişkiler, ayrılıklar, yeni başlangıçlar ve kişisel dönüşüm üzerine samimi içeriklerle ilham vermek.</li>
-      <li>Zaman içinde kendi çizgisi ve topluluğu olan, güvenilir ve kalıcı bir marka oluşturmak.</li>
-    </ul>
-  </section>
-
-  <section class="closing">
-    <h2>Madame Salice bir yolculuk.</h2>
-    <p>Güzellikte zarafeti, üretimde cesareti, hayatta özgürlüğü arıyoruz. Her detayda kendimizden bir parça buluyor; bu dünyayı bizimle keşfetmek isteyen herkese yer açıyoruz.</p>
-  </section>
-</main>
-
-<footer> MADAME SALICE · LIBERA · FORTE · VERA </footer>
+  <footer>© 2026 Madame Salice · Libera · Forte · Vera</footer>
 </body>
 </html>
