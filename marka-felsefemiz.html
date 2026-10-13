@@ -38,15 +38,61 @@
       music.pause();
       toggle.textContent = "♫ Müziği başlat";
     }
-  });
-</script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Madame Salice | Marka Felsefemiz</title>
-  <link rel="icon" type="image/png" href="./bordo%20logo.png">
 
- 
 
+
+
+.kesfet-alani {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 55px 20px 65px;
+  position: relative;
+  z-index: 20;
+}
+
+.kesfet-butonu {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 17px 30px;
+  border: 1px solid #b6975b;
+  background: #fffaf2;
+  color: #590f1c;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.kesfet-butonu span {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.kesfet-butonu:hover {
+  background: #590f1c;
+  color: #fffaf2;
+}
+
+.kesfet-butonu:hover span {
+  transform: translateX(5px);
+}
+
+@media (max-width: 600px) {
+  .kesfet-alani {
+    padding: 35px 16px 45px;
+  }
+
+  .kesfet-butonu {
+    padding: 15px 18px;
+    font-size: 9px;
+    letter-spacing: 1.3px;
+  }
+}
 
 
  <style>
@@ -207,6 +253,13 @@
 </div>
 
     
+
+<div class="kesfet-alani">
+  <a href="./index.html" class="kesfet-butonu">
+    MADAME SALICE DÜNYASINI KEŞFET
+    <span>→</span>
+  </a>
+</div>
 
   </main>
 </body>
