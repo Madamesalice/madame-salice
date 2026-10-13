@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Madame Salice | Üretim Aşaması</title>
+
   <link rel="icon" type="image/png" href="./bordo%20logo.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,14 +18,14 @@
       --paper: #fffaf2;
       --burgundy: #590f1c;
       --gold: #b6975b;
-      --ink: #49352e;
-      --line: #dfd0b8;
+      --ink: #604c3d;
+      --line: rgba(182, 151, 91, 0.65);
     }
 
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     html {
@@ -42,13 +43,13 @@
       color: inherit;
     }
 
-    /* ÜST MENÜ */
+    /* ÜST ALAN — ANA SAYFAYLA UYUMLU */
 
     .site-header {
       position: relative;
       z-index: 20;
-      background: rgba(245, 239, 229, 0.97);
-      border-bottom: 1px solid var(--line);
+      background: var(--cream);
+      border-bottom: 1px solid #d9c8ad;
     }
 
     .brand-area {
@@ -57,26 +58,58 @@
       align-items: center;
       justify-content: center;
       position: relative;
-      padding: 15px;
+      padding: 14px;
     }
 
     .brand-logo {
+      display: block;
       width: 104px;
       height: 104px;
       object-fit: contain;
     }
 
+    .main-nav {
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px 27px;
+      padding: 13px 22px;
+      border-top: 1px solid #d9c8ad;
+      background: rgba(245, 239, 229, 0.97);
+    }
+
+    .main-nav a {
+      color: var(--burgundy);
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: "Montserrat", sans-serif;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 1.4px;
+      white-space: nowrap;
+      transition: opacity 0.2s ease;
+    }
+
+    .main-nav a:hover {
+      opacity: 0.55;
+    }
+
+    /* MÜZİK */
+
     .music-button {
       position: fixed;
-      top: 16px;
-      right: 18px;
+      top: 15px;
+      right: 16px;
       z-index: 100;
       border: 1px solid var(--gold);
       border-radius: 30px;
       padding: 11px 16px;
       background: var(--burgundy);
       color: var(--paper);
-      font: 500 10px "Montserrat", sans-serif;
+      font-family: "Montserrat", sans-serif;
+      font-size: 10px;
       cursor: pointer;
     }
 
@@ -84,293 +117,183 @@
       background: #741c2b;
     }
 
-    .main-nav {
-      min-height: 48px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 10px 28px;
-      padding: 13px 20px;
-      border-top: 1px solid var(--line);
+    /* SAYFANIN TAM BOY ARKA PLANI */
+
+    .page-background {
+      position: relative;
+      isolation: isolate;
+      min-height: 100vh;
+      background-color: var(--cream);
+      background-image:
+        linear-gradient(
+          rgba(245, 239, 229, 0.12),
+          rgba(245, 239, 229, 0.12)
+        ),
+        url("./uretim-arka-plan.png");
+      background-position: center top;
+      background-repeat: repeat-y;
+      background-size: 100% auto;
+      padding-bottom: 1px;
     }
 
-    .main-nav a {
-      text-decoration: none;
-      font: 500 9px "Montserrat", sans-serif;
-      letter-spacing: 1.5px;
-      color: var(--burgundy);
-      text-transform: uppercase;
-      transition: opacity 0.2s ease;
-    }
-
-    .main-nav a:hover {
-      opacity: 0.6;
-    }
-
-    /* SAYFA GİRİŞİ */
+    /* BAŞLIK */
 
     .hero {
       position: relative;
-      overflow: hidden;
-      min-height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       text-align: center;
-      padding: 65px 24px 55px;
-      background:
-        radial-gradient(ellipse at 50% 55%, #fffaf2 0%, #f5efe5 64%, #eee2d0 100%);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 360px;
-      height: 360px;
-      border: 1px solid rgba(182, 151, 91, 0.19);
-      border-radius: 50%;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -45%);
-      pointer-events: none;
-    }
-
-    .hero::after {
-      content: "✳";
-      position: absolute;
-      top: 28px;
-      left: 50%;
-      transform: translateX(-50%);
-      color: var(--gold);
-      font-size: 21px;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-    }
-
-    .eyebrow {
-      font: 500 9px "Montserrat", sans-serif;
-      letter-spacing: 4px;
-      color: var(--gold);
-      margin-bottom: 18px;
-    }
-
-    .hero h1 {
-      font-size: clamp(35px, 5.2vw, 66px);
-      font-weight: 500;
-      line-height: 1.05;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--burgundy);
-      margin-bottom: 18px;
-    }
-
-    .hero-subtitle {
-      font-size: clamp(17px, 2vw, 23px);
-      font-style: italic;
-      line-height: 1.5;
-      color: #806453;
+      padding: 65px 20px 42px;
+      background: linear-gradient(
+        to bottom,
+        rgba(245, 239, 229, 0.75),
+        rgba(245, 239, 229, 0.52)
+      );
     }
 
     .hero-ornament {
-      margin: 23px auto 0;
       color: var(--gold);
-      letter-spacing: 8px;
-      font-size: 15px;
-    }
-
-    /* ANA İÇERİK */
-
-    .production-page {
-      position: relative;
-      isolation: isolate;
-      padding: 55px 5.5% 65px;
-    }
-
-    .production-page::before {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      top: 45px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: min(620px, 75vw);
-      height: 620px;
-      background: url("./bordo%20logo.png") center 20% / contain no-repeat;
-      opacity: 0.025;
-      pointer-events: none;
-    }
-
-    .intro {
-      max-width: 640px;
-      margin: 0 auto 48px;
-      text-align: center;
-    }
-
-    .intro h2 {
-      font-size: 28px;
-      font-weight: 500;
-      color: var(--burgundy);
-      margin-bottom: 12px;
-    }
-
-    .intro p {
-      font-size: 17px;
-      font-style: italic;
-      line-height: 1.7;
-      color: #806d5c;
-    }
-
-    .section-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      max-width: 1200px;
-      margin: 0 auto;
-      border-top: 1px solid var(--line);
-      border-left: 1px solid var(--line);
-    }
-
-    .process-card {
-      min-width: 0;
-      position: relative;
-      display: grid;
-      grid-template-columns: 115px minmax(0, 1fr);
-      align-items: center;
-      gap: 24px;
-      padding: 31px 28px;
-      border-right: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      background: rgba(255, 250, 242, 0.52);
-      transition: background 0.25s ease;
-    }
-
-    .process-card:hover {
-      background: rgba(255, 250, 242, 0.9);
-    }
-
-    .process-card:last-child {
-      grid-column: 1 / -1;
-      grid-template-columns: 150px minmax(0, 1fr);
-      max-width: none;
-      background: rgba(255, 250, 242, 0.7);
-    }
-
-    /* FOTOĞRAF YERİNE HAFİF ATÖLYE MOTİFLERİ */
-
-    .motif {
-      position: relative;
-      min-height: 145px;
-      height: 100%;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background:
-        radial-gradient(ellipse at 30% 25%, rgba(255,255,255,.8), transparent 45%),
-        linear-gradient(145deg, #e8d9c3, #f8efdf 55%, #d9c4a6);
-      border-radius: 70px 70px 3px 3px;
-      border: 1px solid rgba(182, 151, 91, 0.24);
-    }
-
-    .motif::before {
-      content: "";
-      position: absolute;
-      width: 90px;
-      height: 90px;
-      border: 1px solid rgba(89, 15, 28, 0.14);
-      border-radius: 50%;
-    }
-
-    .motif-symbol {
-      position: relative;
-      color: rgba(89, 15, 28, 0.65);
-      font-size: 47px;
+      font-size: 23px;
       line-height: 1;
+      margin-bottom: 15px;
     }
 
-    .process-number {
-      font-size: 43px;
-      line-height: 1;
-      font-weight: 500;
-      color: var(--burgundy);
-      margin-bottom: 12px;
+    .eyebrow {
+      font-family: "Montserrat", sans-serif;
+      font-size: 9px;
+      letter-spacing: 4px;
+      color: var(--gold);
+      margin-bottom: 15px;
     }
 
-    .process-card h2 {
-      font-size: clamp(19px, 2vw, 26px);
-      line-height: 1.15;
+    .hero h1 {
+      font-size: clamp(38px, 5vw, 66px);
       font-weight: 500;
+      line-height: 1.08;
+      letter-spacing: 2px;
       text-transform: uppercase;
       color: var(--burgundy);
       margin-bottom: 14px;
     }
 
-    .process-card p {
-      font-size: 17px;
+    .hero-subtitle {
+      font-size: clamp(18px, 2vw, 24px);
       font-style: italic;
-      line-height: 1.65;
-      color: #786555;
+      line-height: 1.5;
+      color: #725542;
     }
 
-    .process-card .edit-note {
-      display: block;
-      margin-top: 12px;
-      font: 8px "Montserrat", sans-serif;
-      letter-spacing: 1.5px;
-      color: #a18b70;
+    .hero-divider {
+      margin-top: 22px;
+      color: var(--gold);
+      font-size: 19px;
+      letter-spacing: 8px;
+    }
+
+    /* ORTAK ALAN */
+
+    .content-area {
+      width: 100%;
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 12px 5.5% 42px;
+    }
+
+    .intro {
+      max-width: 760px;
+      margin: 0 auto 28px;
+      text-align: center;
+      padding: 22px 28px;
+      background: rgba(255, 250, 242, 0.86);
+      border: 1px solid var(--line);
+    }
+
+    .intro h2 {
+      color: var(--burgundy);
+      font-size: 30px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .intro p {
+      color: var(--ink);
+      font-size: 18px;
+      font-style: italic;
+      line-height: 1.65;
+    }
+
+    /* SEKİZ GENİŞ VE SİMETRİK KUTU */
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      width: 100%;
+    }
+
+    .process-card {
+      position: relative;
+      min-width: 0;
+      min-height: 160px;
+      display: grid;
+      grid-template-columns: 76px minmax(0, 1fr);
+      align-items: center;
+      gap: 22px;
+      padding: 25px 30px;
+      background: rgba(255, 250, 242, 0.91);
+      border: 1px solid var(--line);
+      box-shadow: 0 3px 15px rgba(77, 48, 25, 0.035);
+      transition: background 0.25s ease, border-color 0.25s ease;
+    }
+
+    .process-card:hover {
+      background: rgba(255, 250, 242, 0.97);
+      border-color: var(--gold);
+    }
+
+    .process-number {
+      align-self: start;
+      padding-top: 2px;
+      color: var(--burgundy);
+      font-size: 43px;
+      font-weight: 500;
+      line-height: 1;
+      text-align: center;
+    }
+
+    .number-line {
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      margin: 15px auto 0;
+    }
+
+    .process-card h2 {
+      color: var(--burgundy);
+      font-size: clamp(21px, 2vw, 28px);
+      font-weight: 500;
+      line-height: 1.18;
+      margin-bottom: 12px;
       text-transform: uppercase;
     }
 
-    .inspiration-strip {
-      max-width: 1200px;
-      min-height: 120px;
-      margin: 28px auto 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 25px;
-      padding: 25px;
-      text-align: center;
-      border: 1px solid var(--line);
-      background:
-        radial-gradient(ellipse at 20% 50%, rgba(182,151,91,.13), transparent 50%),
-        radial-gradient(ellipse at 80% 50%, rgba(89,15,28,.035), transparent 50%),
-        rgba(255, 250, 242, 0.65);
-    }
-
-    .inspiration-strip .flower {
-      color: var(--gold);
-      font-size: 32px;
-    }
-
-    .inspiration-strip h2 {
-      font-size: 25px;
-      font-weight: 500;
-      color: var(--burgundy);
-      margin-bottom: 6px;
-    }
-
-    .inspiration-strip p {
-      font-size: 16px;
+    .process-card p {
+      color: #786555;
+      font-size: clamp(16px, 1.3vw, 19px);
       font-style: italic;
-      color: #806d5c;
-      line-height: 1.5;
+      font-weight: 400;
+      line-height: 1.6;
     }
 
-    /* ALT BUTON */
+    /* EN ALT BUTON */
 
     .discover-area {
-      padding: 10px 20px 65px;
+      padding: 15px 20px 65px;
       text-align: center;
+      background: rgba(245, 239, 229, 0.32);
     }
 
     .discover-ornament {
       color: var(--gold);
-      font-size: 18px;
+      font-size: 21px;
       letter-spacing: 9px;
       margin-bottom: 17px;
     }
@@ -379,14 +302,16 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 22px;
-      padding: 19px 30px;
+      gap: 20px;
       max-width: 100%;
+      padding: 19px 30px;
       border: 1px solid var(--gold);
-      background: rgba(255, 250, 242, 0.75);
+      background: rgba(255, 250, 242, 0.94);
       color: var(--burgundy);
       text-decoration: none;
-      font: 500 10px "Montserrat", sans-serif;
+      font-family: "Montserrat", sans-serif;
+      font-size: 10px;
+      font-weight: 500;
       letter-spacing: 2px;
       transition: background 0.25s ease, color 0.25s ease;
     }
@@ -406,17 +331,51 @@
     }
 
     .site-footer {
-      border-top: 1px solid var(--line);
       padding: 20px;
       text-align: center;
-      font: 9px "Montserrat", sans-serif;
-      letter-spacing: 2px;
+      border-top: 1px solid #d9c8ad;
+      background: var(--cream);
       color: #8d7863;
+      font-family: "Montserrat", sans-serif;
+      font-size: 9px;
+      letter-spacing: 2px;
     }
 
-    /* TELEFON VE TABLET */
+    /* TABLET */
 
-    @media (max-width: 760px) {
+    @media (max-width: 900px) {
+      .content-area {
+        padding-left: 3%;
+        padding-right: 3%;
+      }
+
+      .process-card {
+        grid-template-columns: 58px minmax(0, 1fr);
+        gap: 16px;
+        padding: 23px 19px;
+      }
+
+      .process-number {
+        font-size: 36px;
+      }
+
+      .process-card h2 {
+        font-size: 21px;
+      }
+
+      .process-card p {
+        font-size: 16px;
+      }
+
+      .page-background {
+        background-size: auto 900px;
+        background-position: center top;
+      }
+    }
+
+    /* TELEFON */
+
+    @media (max-width: 620px) {
       .brand-area {
         min-height: 90px;
       }
@@ -427,56 +386,75 @@
       }
 
       .main-nav {
-        gap: 14px 18px;
-        padding: 14px 12px;
+        gap: 13px 17px;
+        padding: 14px 10px;
       }
 
       .main-nav a {
         font-size: 8px;
-        letter-spacing: 1px;
+        letter-spacing: 0.8px;
+      }
+
+      .music-button {
+        top: 8px;
+        right: 8px;
+        padding: 9px 11px;
+        font-size: 9px;
       }
 
       .hero {
-        min-height: 260px;
-        padding: 65px 18px 40px;
+        padding: 52px 17px 30px;
       }
 
-      .hero::before {
-        width: 280px;
-        height: 280px;
+      .hero h1 {
+        font-size: clamp(32px, 8vw, 45px);
+        letter-spacing: 1px;
       }
 
-      .production-page {
-        padding: 35px 15px 45px;
+      .hero-subtitle {
+        font-size: 18px;
       }
 
-      .section-grid {
+      .content-area {
+        padding: 8px 12px 30px;
+      }
+
+      .intro {
+        margin-bottom: 15px;
+        padding: 20px 16px;
+      }
+
+      .intro h2 {
+        font-size: 25px;
+      }
+
+      .intro p {
+        font-size: 16px;
+      }
+
+      .process-grid {
         grid-template-columns: 1fr;
+        gap: 9px;
       }
 
-      .process-card,
-      .process-card:last-child {
-        grid-column: auto;
-        grid-template-columns: 88px minmax(0, 1fr);
-        gap: 17px;
-        padding: 22px 16px;
-      }
-
-      .motif {
-        min-height: 125px;
-      }
-
-      .motif-symbol {
-        font-size: 36px;
+      .process-card {
+        min-height: 130px;
+        grid-template-columns: 48px minmax(0, 1fr);
+        gap: 14px;
+        padding: 20px 17px;
       }
 
       .process-number {
-        font-size: 35px;
-        margin-bottom: 9px;
+        font-size: 31px;
+      }
+
+      .number-line {
+        width: 28px;
+        margin-top: 10px;
       }
 
       .process-card h2 {
-        font-size: 20px;
+        font-size: 21px;
         margin-bottom: 8px;
       }
 
@@ -485,35 +463,15 @@
         line-height: 1.5;
       }
 
-      .process-card .edit-note {
-        font-size: 7px;
-      }
-
-      .inspiration-strip {
-        gap: 12px;
-        padding: 20px 12px;
-      }
-
-      .inspiration-strip h2 {
-        font-size: 21px;
-      }
-
-      .inspiration-strip p {
-        font-size: 15px;
+      .discover-area {
+        padding: 12px 12px 42px;
       }
 
       .discover-button {
-        padding: 17px 18px;
+        padding: 16px 17px;
         gap: 10px;
         font-size: 9px;
         letter-spacing: 1px;
-      }
-
-      .music-button {
-        top: 10px;
-        right: 10px;
-        padding: 9px 12px;
-        font-size: 9px;
       }
     }
 
@@ -522,7 +480,9 @@
         scroll-behavior: auto;
       }
 
-      * {
+      *,
+      *::before,
+      *::after {
         transition: none !important;
       }
     }
@@ -534,7 +494,10 @@
   <header class="site-header">
     <div class="brand-area">
       <a href="./index.html" aria-label="Madame Salice ana sayfa">
-        <img class="brand-logo" src="./bordo%20logo.png" alt="Madame Salice">
+        <img
+          class="brand-logo"
+          src="./bordo%20logo.png"
+          alt="Madame Salice">
       </a>
     </div>
 
@@ -542,9 +505,10 @@
       <a href="./index.html">Home</a>
       <a href="./index.html#maison">Maison</a>
       <a href="./index.html#atelier">Atelier</a>
+      <a href="./index.html#madame-salice-diyor-ki">Madame Salice Diyor Ki</a>
       <a href="./marka-felsefemiz.html">Marka Felsefemiz</a>
       <a href="./index.html#who">Kim Bu Madame Salice?</a>
-      <a href="./index.html#contact">Bize Ulaş</a>
+      <a href="./index.html#contact">Bize Ulaş!</a>
     </nav>
   </header>
 
@@ -552,110 +516,122 @@
     <source src="./madame-salice-ambience.mp3" type="audio/mpeg">
   </audio>
 
-  <button class="music-button" id="musicToggle" type="button">
+  <button
+    class="music-button"
+    id="musicToggle"
+    type="button"
+    aria-label="Arka plan müziğini başlat veya durdur">
     ♫ Müziği başlat
   </button>
 
-  <main>
+  <main class="page-background">
+
     <section class="hero">
       <div class="hero-content">
         <p class="eyebrow">MADAME SALICE · ATÖLYE</p>
         <h1>Üretim Aşaması</h1>
         <p class="hero-subtitle">Her detay, özenli bir yolculuğun parçası.</p>
-        <div class="hero-ornament">— ✳ —</div>
+        <div class="hero-divider">— ✳ —</div>
       </div>
     </section>
 
-    <section class="production-page">
+    <section class="content-area">
+
       <div class="intro">
         <h2>Bir fikrin yolculuğu</h2>
-        <p>
-          Her tasarımın kendine özgü bir hikâyesi vardır.
-          Bu alana üretim anlayışını anlatan giriş metnini yazabilirsin.
-        </p>
+        <p>Buraya üretim anlayışını anlatan giriş metnini kendin yazabilirsin.</p>
       </div>
 
-      <div class="section-grid">
+      <div class="process-grid">
 
         <article class="process-card">
-          <div class="motif"><span class="motif-symbol">❀</span></div>
+          <div class="process-number">
+            01
+            <div class="number-line"></div>
+          </div>
           <div>
-            <div class="process-number">01</div>
             <h2>Ürünler Nasıl Üretiliyor?</h2>
-            <p>Bu alana ürünlerinin üretim sürecini anlatan metnini yazabilirsin.</p>
-            <span class="edit-note">Metnini buraya ekle</span>
+            <p>Buraya ürünlerinin üretim sürecini anlatan metnini yaz.</p>
           </div>
         </article>
 
         <article class="process-card">
-          <div class="motif"><span class="motif-symbol">✿</span></div>
+          <div class="process-number">
+            02
+            <div class="number-line"></div>
+          </div>
           <div>
-            <div class="process-number">02</div>
             <h2>Hangi Malzemeler Kullanılıyor?</h2>
-            <p>Bu alana kullandığın malzemeleri ve seçim ölçütlerini yazabilirsin.</p>
-            <span class="edit-note">Metnini buraya ekle</span>
+            <p>Buraya kullandığın malzemeleri ve seçim ölçütlerini yaz.</p>
           </div>
         </article>
 
         <article class="process-card">
-          <div class="motif"><span class="motif-symbol">♡</span></div>
+          <div class="process-number">
+            03
+            <div class="number-line"></div>
+          </div>
           <div>
-            <div class="process-number">03</div>
             <h2>Nasıl Sipariş Verilir?</h2>
-            <p>Bu alana sipariş oluşturma adımlarını anlatan metnini yazabilirsin.</p>
-            <span class="edit-note">Metnini buraya ekle</span>
+            <p>Buraya sipariş oluşturma adımlarını anlatan metnini yaz.</p>
           </div>
         </article>
 
         <article class="process-card">
-          <div class="motif"><span class="motif-symbol">⌛</span></div>
+          <div class="process-number">
+            04
+            <div class="number-line"></div>
+          </div>
           <div>
-            <div class="process-number">04</div>
             <h2>Ortalama Üretim Süreleri</h2>
-            <p>Bu alana ürün türlerine göre ortalama üretim sürelerini yazabilirsin.</p>
-            <span class="edit-note">Metnini buraya ekle</span>
+            <p>Buraya ürün türlerine göre ortalama üretim sürelerini yaz.</p>
           </div>
         </article>
 
         <article class="process-card">
-          <div class="motif"><span class="motif-symbol">✎</span></div>
+          <div class="process-number">
+            05
+            <div class="number-line"></div>
+          </div>
           <div>
-            <div class="process-number">05</div>
             <h2>Özel Tasarım İçin Ne Yapmak Gerekir?</h2>
-            <p>Bu alana kişiye özel tasarım talebinin nasıl ilerlediğini yazabilirsin.</p>
-            <span class="edit-note">Metnini buraya ekle</span>
+            <p>Buraya kişiye özel tasarım talebinin nasıl ilerlediğini yaz.</p>
           </div>
         </article>
 
         <article class="process-card">
-          <div class="motif"><span class="motif-symbol">♧</span></div>
+          <div class="process-number">
+            06
+            <div class="number-line"></div>
+          </div>
           <div>
-            <div class="process-number">06</div>
             <h2>Çoklu Siparişlerde Süreç Nasıldır?</h2>
-            <p>Bu alana toplu siparişler, planlama ve teslimat sürecini yazabilirsin.</p>
-            <span class="edit-note">Metnini buraya ekle</span>
+            <p>Buraya toplu siparişler, planlama ve teslimat sürecini yaz.</p>
           </div>
         </article>
 
         <article class="process-card">
-          <div class="motif"><span class="motif-symbol">✧</span></div>
+          <div class="process-number">
+            07
+            <div class="number-line"></div>
+          </div>
           <div>
-            <div class="process-number">07</div>
             <h2>Nelerden İlham Alıyoruz?</h2>
-            <p>Bu alana ilham kaynaklarını, renklerini, doğayı ve yaratıcı yaklaşımını anlatabilirsin.</p>
-            <span class="edit-note">Metnini buraya ekle</span>
+            <p>Buraya ilham kaynaklarını, renklerini ve yaratıcı yaklaşımını yaz.</p>
           </div>
         </article>
 
-      </div>
+        <article class="process-card">
+          <div class="process-number">
+            08
+            <div class="number-line"></div>
+          </div>
+          <div>
+            <h2>Başka Neler Bilmelisiniz?</h2>
+            <p>Buraya bakım önerileri, teslimat sonrası bilgiler veya sık sorulan konuları yaz.</p>
+          </div>
+        </article>
 
-      <div class="inspiration-strip">
-        <span class="flower" aria-hidden="true">✿</span>
-        <div>
-          <h2>Her detayın bir hikâyesi var.</h2>
-          <p>Madame Salice dünyasına dair kendi cümleni buraya ekleyebilirsin.</p>
-        </div>
-        <span class="flower" aria-hidden="true">✿</span>
       </div>
     </section>
 
@@ -666,6 +642,7 @@
         <span aria-hidden="true">→</span>
       </a>
     </section>
+
   </main>
 
   <footer class="site-footer">
