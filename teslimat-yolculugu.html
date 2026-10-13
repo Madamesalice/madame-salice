@@ -1,1 +1,664 @@
 
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madame Salice | Teslimat Yolculuğu</title>
+
+  <link rel="icon" type="image/png" href="./bordo%20logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #f5efe5;
+      --paper: #fffaf2;
+      --burgundy: #590f1c;
+      --gold: #b6975b;
+      --ink: #604c3d;
+      --line: rgba(182, 151, 91, 0.65);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    /* ÜST ALAN — ÜRETİM SAYFASIYLA AYNI */
+
+    .site-header {
+      position: relative;
+      z-index: 20;
+      background: var(--cream);
+      border-bottom: 1px solid #d9c8ad;
+    }
+
+    .brand-area {
+      min-height: 112px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding: 14px;
+    }
+
+    .brand-logo {
+      display: block;
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+    }
+
+    .main-nav {
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px 27px;
+      padding: 13px 22px;
+      border-top: 1px solid #d9c8ad;
+      background: rgba(245, 239, 229, 0.97);
+    }
+
+    .main-nav a {
+      color: var(--burgundy);
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: "Montserrat", sans-serif;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 1.4px;
+      white-space: nowrap;
+      transition: opacity 0.2s ease;
+    }
+
+    .main-nav a:hover {
+      opacity: 0.55;
+    }
+
+    /* MÜZİK */
+
+    .music-button {
+      position: fixed;
+      top: 15px;
+      right: 16px;
+      z-index: 100;
+      border: 1px solid var(--gold);
+      border-radius: 30px;
+      padding: 11px 16px;
+      background: var(--burgundy);
+      color: var(--paper);
+      font-family: "Montserrat", sans-serif;
+      font-size: 10px;
+      cursor: pointer;
+    }
+
+    .music-button:hover {
+      background: #741c2b;
+    }
+
+    /* TESLİMAT SAYFASININ TAM BOY ARKA PLANI */
+
+    .page-background {
+      position: relative;
+      isolation: isolate;
+      min-height: 100vh;
+      background-color: var(--cream);
+      background-image: url("./teslimat-yolculugu.png");
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      padding-bottom: 1px;
+    }
+
+    /* BAŞLIK */
+
+    .hero {
+      position: relative;
+      text-align: center;
+      padding: 65px 20px 42px;
+      background: linear-gradient(
+        to bottom,
+        rgba(245, 239, 229, 0.75),
+        rgba(245, 239, 229, 0.52)
+      );
+    }
+
+    .hero-ornament {
+      color: var(--gold);
+      font-size: 23px;
+      line-height: 1;
+      margin-bottom: 15px;
+    }
+
+    .eyebrow {
+      font-family: "Montserrat", sans-serif;
+      font-size: 9px;
+      letter-spacing: 4px;
+      color: var(--gold);
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 5vw, 66px);
+      font-weight: 500;
+      line-height: 1.08;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      margin-bottom: 14px;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(18px, 2vw, 24px);
+      font-style: italic;
+      line-height: 1.5;
+      color: #725542;
+    }
+
+    .hero-divider {
+      margin-top: 22px;
+      color: var(--gold);
+      font-size: 19px;
+      letter-spacing: 8px;
+    }
+
+    /* ORTAK ALAN */
+
+    .content-area {
+      width: 100%;
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 12px 5.5% 42px;
+    }
+
+    .intro {
+      max-width: 760px;
+      margin: 0 auto 28px;
+      text-align: center;
+      padding: 22px 28px;
+      background: rgba(255, 250, 242, 0.86);
+      border: 1px solid var(--line);
+    }
+
+    .intro h2 {
+      color: var(--burgundy);
+      font-size: 30px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .intro p {
+      color: var(--ink);
+      font-size: 18px;
+      font-style: italic;
+      line-height: 1.65;
+    }
+
+    /* SEKİZ GENİŞ VE SİMETRİK KUTU */
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      width: 100%;
+    }
+
+    .process-card {
+      position: relative;
+      min-width: 0;
+      min-height: 160px;
+      display: grid;
+      grid-template-columns: 76px minmax(0, 1fr);
+      align-items: center;
+      gap: 22px;
+      padding: 25px 30px;
+      background: rgba(255, 250, 242, 0.91);
+      border: 1px solid var(--line);
+      box-shadow: 0 3px 15px rgba(77, 48, 25, 0.035);
+      transition: background 0.25s ease, border-color 0.25s ease;
+    }
+
+    .process-card:hover {
+      background: rgba(255, 250, 242, 0.97);
+      border-color: var(--gold);
+    }
+
+    .process-number {
+      align-self: start;
+      padding-top: 2px;
+      color: var(--burgundy);
+      font-size: 43px;
+      font-weight: 500;
+      line-height: 1;
+      text-align: center;
+    }
+
+    .number-line {
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      margin: 15px auto 0;
+    }
+
+    .process-card h2 {
+      color: var(--burgundy);
+      font-size: clamp(21px, 2vw, 28px);
+      font-weight: 500;
+      line-height: 1.18;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .process-card p {
+      color: #786555;
+      font-size: clamp(16px, 1.3vw, 19px);
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    /* EN ALT BUTON */
+
+    .discover-area {
+      padding: 15px 20px 65px;
+      text-align: center;
+      background: rgba(245, 239, 229, 0.32);
+    }
+
+    .discover-ornament {
+      color: var(--gold);
+      font-size: 21px;
+      letter-spacing: 9px;
+      margin-bottom: 17px;
+    }
+
+    .discover-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      max-width: 100%;
+      padding: 19px 30px;
+      border: 1px solid var(--gold);
+      background: rgba(255, 250, 242, 0.94);
+      color: var(--burgundy);
+      text-decoration: none;
+      font-family: "Montserrat", sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+
+    .discover-button span {
+      font-size: 18px;
+      transition: transform 0.25s ease;
+    }
+
+    .discover-button:hover {
+      background: var(--burgundy);
+      color: var(--paper);
+    }
+
+    .discover-button:hover span {
+      transform: translateX(5px);
+    }
+
+    .site-footer {
+      padding: 20px;
+      text-align: center;
+      border-top: 1px solid #d9c8ad;
+      background: var(--cream);
+      color: #8d7863;
+      font-family: "Montserrat", sans-serif;
+      font-size: 9px;
+      letter-spacing: 2px;
+    }
+
+    /* TABLET */
+
+    @media (max-width: 900px) {
+      .content-area {
+        padding-left: 3%;
+        padding-right: 3%;
+      }
+
+      .process-card {
+        grid-template-columns: 58px minmax(0, 1fr);
+        gap: 16px;
+        padding: 23px 19px;
+      }
+
+      .process-number {
+        font-size: 36px;
+      }
+
+      .process-card h2 {
+        font-size: 21px;
+      }
+
+      .process-card p {
+        font-size: 16px;
+      }
+    }
+
+    /* TELEFON */
+
+    @media (max-width: 620px) {
+      .brand-area {
+        min-height: 145px;
+      }
+
+      .brand-logo {
+        width: 125px;
+        height: 125px;
+      }
+
+      .main-nav {
+        gap: 13px 17px;
+        padding: 14px 10px;
+      }
+
+      .main-nav a {
+        font-size: 8px;
+        letter-spacing: 0.8px;
+      }
+
+      .music-button {
+        top: 8px;
+        right: 8px;
+        padding: 9px 11px;
+        font-size: 9px;
+      }
+
+      .hero {
+        padding: 52px 17px 30px;
+      }
+
+      .hero h1 {
+        font-size: clamp(32px, 8vw, 45px);
+        letter-spacing: 1px;
+      }
+
+      .hero-subtitle {
+        font-size: 18px;
+      }
+
+      .content-area {
+        padding: 8px 12px 30px;
+      }
+
+      .intro {
+        margin-bottom: 15px;
+        padding: 20px 16px;
+      }
+
+      .intro h2 {
+        font-size: 25px;
+      }
+
+      .intro p {
+        font-size: 16px;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr;
+        gap: 9px;
+      }
+
+      .process-card {
+        min-height: 130px;
+        grid-template-columns: 48px minmax(0, 1fr);
+        gap: 14px;
+        padding: 20px 17px;
+      }
+
+      .process-number {
+        font-size: 31px;
+      }
+
+      .number-line {
+        width: 28px;
+        margin-top: 10px;
+      }
+
+      .process-card h2 {
+        font-size: 21px;
+        margin-bottom: 8px;
+      }
+
+      .process-card p {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .discover-area {
+        padding: 12px 12px 42px;
+      }
+
+      .discover-button {
+        padding: 16px 17px;
+        gap: 10px;
+        font-size: 9px;
+        letter-spacing: 1px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="brand-area">
+      <a href="./index.html" aria-label="Madame Salice ana sayfa">
+        <img
+          class="brand-logo"
+          src="./bordo%20logo.png"
+          alt="Madame Salice">
+      </a>
+    </div>
+
+    <nav class="main-nav" aria-label="Ana menü">
+      <a href="./index.html">Home</a>
+      <a href="./index.html#maison">Maison</a>
+      <a href="./index.html#atelier">Atelier</a>
+      <a href="./index.html#madame-salice-diyor-ki">Madame Salice Diyor Ki</a>
+      <a href="./marka-felsefemiz.html">Marka Felsefemiz</a>
+      <a href="./index.html#who">Kim Bu Madame Salice?</a>
+      <a href="./index.html#contact">Bize Ulaş!</a>
+    </nav>
+  </header>
+
+  <audio id="madameMusic" loop preload="auto">
+    <source src="./madame-salice-ambience.mp3" type="audio/mpeg">
+  </audio>
+
+  <button
+    class="music-button"
+    id="musicToggle"
+    type="button"
+    aria-label="Arka plan müziğini başlat veya durdur">
+    ♫ Müziği başlat
+  </button>
+
+  <main class="page-background">
+
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">MADAME SALICE · TESLİMAT</p>
+        <h1>Teslimat Yolculuğu</h1>
+        <p class="hero-subtitle">Her sipariş, özenle hazırlanan bir yolculuğun parçası.</p>
+        <div class="hero-divider">— ✳ —</div>
+      </div>
+    </section>
+
+    <section class="content-area">
+
+      <div class="intro">
+        <h2>Bir paketin yolculuğu</h2>
+        <p>Buraya paketleme ve teslimat anlayışını anlatan giriş metnini kendin yazabilirsin.</p>
+      </div>
+
+      <div class="process-grid">
+
+        <article class="process-card">
+          <div class="process-number">
+            01
+            <div class="number-line"></div>
+          </div>
+          <div>
+            <h2>Siparişiniz Nasıl Hazırlanır?</h2>
+            <p>Buraya siparişin hazırlanma sürecini anlatan metnini yaz.</p>
+          </div>
+        </article>
+
+        <article class="process-card">
+          <div class="process-number">
+            02
+            <div class="number-line"></div>
+          </div>
+          <div>
+            <h2>Paketlemede Neler Kullanılır?</h2>
+            <p>Buraya ambalaj, kurdele ve paketleme malzemelerini anlatan metnini yaz.</p>
+          </div>
+        </article>
+
+        <article class="process-card">
+          <div class="process-number">
+            03
+            <div class="number-line"></div>
+          </div>
+          <div>
+            <h2>Teslimat Süreci Nasıl İşler?</h2>
+            <p>Buraya kargo veya teslimat aşamalarını anlatan metnini yaz.</p>
+          </div>
+        </article>
+
+        <article class="process-card">
+          <div class="process-number">
+            04
+            <div class="number-line"></div>
+          </div>
+          <div>
+            <h2>Teslimat Süresi Ne Kadardır?</h2>
+            <p>Buraya hazırlık ve kargo süreleri hakkında bilgi yaz.</p>
+          </div>
+        </article>
+
+        <article class="process-card">
+          <div class="process-number">
+            05
+            <div class="number-line"></div>
+          </div>
+          <div>
+            <h2>Hediye Paketleri</h2>
+            <p>Buraya hediye paketleme seçeneklerini ve kişisel dokunuşları anlatan metnini yaz.</p>
+          </div>
+        </article>
+
+        <article class="process-card">
+          <div class="process-number">
+            06
+            <div class="number-line"></div>
+          </div>
+          <div>
+            <h2>Çoklu Siparişlerin Teslimatı</h2>
+            <p>Buraya toplu siparişlerin hazırlanması ve teslimatını anlatan metnini yaz.</p>
+          </div>
+        </article>
+
+        <article class="process-card">
+          <div class="process-number">
+            07
+            <div class="number-line"></div>
+          </div>
+          <div>
+            <h2>Kargo Takibi ve Bilgilendirme</h2>
+            <p>Buraya kargo takibi ve müşteriye yapılacak bilgilendirmeleri anlatan metnini yaz.</p>
+          </div>
+        </article>
+
+        <article class="process-card">
+          <div class="process-number">
+            08
+            <div class="number-line"></div>
+          </div>
+          <div>
+            <h2>Teslimat Sonrası Destek</h2>
+            <p>Buraya teslimat sonrası sorular ve destek süreci hakkında metnini yaz.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="discover-area">
+      <div class="discover-ornament">— ✳ —</div>
+      <a class="discover-button" href="./index.html">
+        MADAME SALICE DÜNYASINI KEŞFET
+        <span aria-hidden="true">→</span>
+      </a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    MADAME SALICE · LIBERA · FORTE · VERA
+  </footer>
+
+  <script>
+    const music = document.getElementById("madameMusic");
+    const musicToggle = document.getElementById("musicToggle");
+
+    music.volume = 0.22;
+
+    musicToggle.addEventListener("click", async () => {
+      if (music.paused) {
+        try {
+          await music.play();
+          musicToggle.textContent = "♫ Müziği durdur";
+        } catch (error) {
+          musicToggle.textContent = "♫ Tekrar dene";
+        }
+      } else {
+        music.pause();
+        musicToggle.textContent = "♫ Müziği başlat";
+      }
+    });
+  </script>
+
+</body>
+</html>
