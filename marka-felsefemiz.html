@@ -1,1 +1,347 @@
 
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marka Felsefemiz | Madame Salice</title>
+
+<!-- Tarayıcı sekmesi ikonu -->
+<link rel="icon" type="image/png" href="./bordo%20logo.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --cream: #f5efe5;
+  --paper: #fffaf2;
+  --burgundy: #590f1c;
+  --gold: #b6975b;
+  --black: #171411;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--black);
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+header {
+  padding: 22px 6%;
+  text-align: center;
+  border-bottom: 1px solid #cbbda7;
+}
+
+header a {
+  color: var(--burgundy);
+  text-decoration: none;
+  font: 11px "Montserrat", sans-serif;
+  letter-spacing: 2px;
+}
+
+.hero {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 55px 7%;
+  background: var(--cream);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("./madame-salice-marka-felsefesi-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 1;
+  width: min(460px, 100%);
+  padding: 30px;
+  text-align: center;
+  background: rgba(255, 250, 242, 0.88);
+  border: 1px solid var(--gold);
+}
+
+.eyebrow {
+  color: var(--gold);
+  font: 10px "Montserrat", sans-serif;
+  letter-spacing: 3px;
+}
+
+h1, h2 {
+  color: var(--burgundy);
+  font-weight: 400;
+}
+
+h1 {
+  margin: 18px 0;
+  font-size: clamp(40px, 5vw, 62px);
+  line-height: 1;
+}
+
+.hero-copy p {
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.content {
+  max-width: 1050px;
+  padding: 65px 24px;
+  margin: auto;
+}
+
+.section {
+  max-width: 760px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+h2 {
+  font-size: clamp(32px, 4vw, 46px);
+  margin: 12px 0 18px;
+}
+
+.section p {
+  font-size: 21px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.values {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 40px 0 65px;
+}
+
+.value {
+  padding: 28px 22px;
+  text-align: center;
+  background: var(--paper);
+  border: 1px solid #d8c9b2;
+}
+
+.value h3 {
+  margin: 0 0 12px;
+  color: var(--burgundy);
+  font-size: 29px;
+  font-weight: 500;
+}
+
+.value p {
+  font-size: 18px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.closing {
+  padding: 55px 24px;
+  text-align: center;
+  background: var(--burgundy);
+  color: var(--paper);
+}
+
+.closing h2 {
+  color: var(--paper);
+}
+
+.closing p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 22px;
+  line-height: 1.6;
+}
+
+.back {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 13px 22px;
+  border: 1px solid var(--gold);
+  color: var(--paper);
+  text-decoration: none;
+  font: 10px "Montserrat", sans-serif;
+  letter-spacing: 1.5px;
+}
+
+footer {
+  padding: 22px;
+  text-align: center;
+  color: #71675b;
+  font: 10px "Montserrat", sans-serif;
+  letter-spacing: 1px;
+}
+
+/* Sabit müzik butonu */
+#musicToggle {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  padding: 12px 18px;
+  border: 1px solid var(--gold);
+  border-radius: 30px;
+  background: var(--burgundy);
+  color: var(--paper);
+  font: 11px "Montserrat", sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(23, 20, 17, 0.15);
+}
+
+#musicToggle:hover {
+  background: #741725;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: 520px;
+    padding: 30px 18px;
+    justify-content: center;
+  }
+
+  .hero-copy {
+    padding: 24px 18px;
+  }
+
+  .values {
+    grid-template-columns: 1fr;
+  }
+
+  .section p {
+    font-size: 19px;
+  }
+
+  #musicToggle {
+    right: 12px;
+    bottom: 12px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="./index.html">MADAME SALICE · ANA SAYFAYA DÖN</a>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-copy">
+      <div class="eyebrow">LIBERA · FORTE · VERA</div>
+      <h1>Marka<br>Felsefemiz</h1>
+      <p>Daha estetik, daha anlamlı, daha özgür bir yaşam için.</p>
+    </div>
+  </section>
+
+  <div class="content">
+
+    <section class="section">
+      <div class="eyebrow">İNANCIMIZ</div>
+      <h2>Bir markadan daha fazlası.</h2>
+      <p>
+        Madame Salice; hayatın içindeki güzellikleri fark etmek,
+        yaratıcılığa alan açmak ve kendi hikâyemizi cesaretle kurmak
+        üzerine doğdu. Bizim için estetik yalnızca güzel görünen değil,
+        hissettiren ve anlam taşıyan şeydir.
+      </p>
+    </section>
+
+    <div class="values">
+      <article class="value">
+        <h3>Libera</h3>
+        <p>Kendi yolunu seçmek, özgür düşünmek ve özgün kalmak.</p>
+      </article>
+
+      <article class="value">
+        <h3>Forte</h3>
+        <p>Cesaretini, gücünü ve tutkunu seçimlerine yansıtmak.</p>
+      </article>
+
+      <article class="value">
+        <h3>Vera</h3>
+        <p>İçten olmak, kendine sadık kalmak ve gerçeğini yaşamak.</p>
+      </article>
+    </div>
+
+    <section class="section">
+      <div class="eyebrow">MADAME SALICE DÜNYASI</div>
+      <h2>Neler paylaşacağız?</h2>
+      <p>
+        Çantalar, aksesuarlar, takılar, punch işleme ve el emeği ürünler;
+        ev dekorasyonu, seyahatler, keşfedilmeyi bekleyen mekânlar ve
+        ilham veren yaşam fikirleri… İlişkiler, ayrılıklar, yeni başlangıçlar
+        ve kız gücü üzerine samimi içerikler de bu dünyanın bir parçası olacak.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="eyebrow">GELECEK HAYALİMİZ</div>
+      <h2>İlham veren bir topluluk.</h2>
+      <p>
+        Instagram'da başlayıp zamanla özgün ürünleri, kendine ait estetiği
+        ve güçlü bir topluluğu olan kalıcı bir marka oluşturmak istiyoruz.
+        Amacımız yalnızca ürün sunmak değil; insanlara kendilerini ifade
+        etmeleri ve kendi seçimlerini sevmeleri için ilham vermek.
+      </p>
+    </section>
+
+  </div>
+
+  <section class="closing">
+    <div class="eyebrow">MADAME SALICE</div>
+    <h2>She feels. She dares. She creates.</h2>
+    <p>Hisset. Cesaret et. Yarat. Kendi hikâyeni, kendi seçimlerinle yaz.</p>
+    <a class="back" href="./index.html">ANA SAYFAYA DÖN →</a>
+  </section>
+
+</main>
+
+<footer>
+  MADAME SALICE · LIBERA · FORTE · VERA
+</footer>
+
+<!-- Arka plan müziği -->
+<audio id="madameMusic" loop preload="none">
+  <source src="./madame-salice-ambience.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicToggle" type="button">♫ Müziği başlat</button>
+
+<script>
+const music = document.getElementById("madameMusic");
+const toggle = document.getElementById("musicToggle");
+
+music.volume = 0.22;
+
+toggle.addEventListener("click", async () => {
+  if (music.paused) {
+    try {
+      await music.play();
+      toggle.textContent = "♫ Müziği durdur";
+    } catch (error) {
+      toggle.textContent = "♫ Tekrar dene";
+    }
+  } else {
+    music.pause();
+    toggle.textContent = "♫ Müziği başlat";
+  }
+});
+</script>
+
+</body>
+</html>
