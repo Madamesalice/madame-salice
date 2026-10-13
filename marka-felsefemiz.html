@@ -24,12 +24,19 @@
   box-sizing: border-box;
 }
 
+
 body {
   margin: 0;
-  background: var(--cream);
+  background-color: var(--cream);
+  background-image: url("./madame-salice-marka-felsefesi-bg.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+  background-attachment: scroll;
   color: var(--black);
   font-family: "Cormorant Garamond", Georgia, serif;
 }
+
 
 header {
   padding: 22px 6%;
@@ -56,15 +63,6 @@ header a {
   overflow: hidden;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("./madame-salice-marka-felsefesi-bg.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
 
 .hero-copy {
   position: relative;
