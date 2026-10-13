@@ -1,1 +1,267 @@
 
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kim Bu Madame Salice? | Madame Salice</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #f5efe5;
+      --paper: #fffaf2;
+      --black: #171411;
+      --burgundy: #590f1c;
+      --gold: #b6975b;
+      --muted: #71675b;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--black);
+      font-family: "Cormorant Garamond", Georgia, serif;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px 20px 18px;
+      border-bottom: 1px solid #cbbda7;
+    }
+
+    .logo {
+      width: 180px;
+      height: 180px;
+      object-fit: contain;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 28px;
+      padding: 20px 16px;
+      border-bottom: 1px solid #cbbda7;
+      font: 11px "Montserrat", sans-serif;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: var(--black);
+      text-decoration: none;
+    }
+
+    nav a:hover { color: var(--burgundy); }
+
+    .story-hero {
+      padding: 90px 8% 75px;
+      text-align: center;
+      background:
+        linear-gradient(rgba(245,239,229,.80), rgba(245,239,229,.88)),
+        url("./madame-salice-hero5.png") center / cover no-repeat;
+    }
+
+    .eyebrow {
+      color: var(--burgundy);
+      font: 11px "Montserrat", sans-serif;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 900px;
+      margin: 24px auto;
+      color: var(--burgundy);
+      font-size: clamp(42px, 6vw, 76px);
+      font-weight: 500;
+      line-height: 1;
+      font-style: italic;
+    }
+
+    .intro {
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: 24px;
+      line-height: 1.65;
+      color: var(--muted);
+    }
+
+    .story-content {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 65px 28px 90px;
+    }
+
+    .story-content h2 {
+      color: var(--burgundy);
+      font-size: clamp(32px, 4vw, 46px);
+      font-weight: 500;
+      margin: 38px 0 14px;
+    }
+
+    .story-content p {
+      font-size: 21px;
+      line-height: 1.8;
+      margin: 0 0 22px;
+    }
+
+    .quote {
+      margin: 48px 0;
+      padding: 28px;
+      border-top: 1px solid var(--gold);
+      border-bottom: 1px solid var(--gold);
+      text-align: center;
+      color: var(--burgundy);
+      font-size: clamp(28px, 4vw, 42px);
+      font-style: italic;
+    }
+
+    .values {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 38px;
+    }
+
+    .value {
+      padding: 28px 20px;
+      border: 1px solid #d9cbb6;
+      text-align: center;
+      background: var(--paper);
+    }
+
+    .value h3 {
+      margin: 0 0 12px;
+      color: var(--burgundy);
+      font-size: 28px;
+      font-weight: 500;
+    }
+
+    .value p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 35px;
+      padding: 15px 25px;
+      background: var(--burgundy);
+      color: white;
+      border: 1px solid var(--gold);
+      text-decoration: none;
+      font: 11px "Montserrat", sans-serif;
+      letter-spacing: 1.5px;
+    }
+
+    footer {
+      padding: 28px 20px;
+      text-align: center;
+      border-top: 1px solid #cbbda7;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    @media (max-width: 650px) {
+      .logo { width: 135px; height: 135px; }
+      nav { gap: 16px; line-height: 1.8; }
+      .story-hero { padding: 65px 22px; }
+      .intro { font-size: 21px; }
+      .values { grid-template-columns: 1fr; }
+      .story-content { padding: 40px 22px 60px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="./#home" aria-label="Madame Salice ana sayfa">
+      <img class="logo" src="./bordo%20logo.png" alt="Madame Salice logosu">
+    </a>
+  </header>
+
+  <nav aria-label="Ana menü">
+    <a href="./#home">HOME</a>
+    <a href="./#maison">MAISON</a>
+    <a href="./#atelier">ATELIER</a>
+    <a href="./#says">MADAME SALICE DİYOR Kİ</a>
+    <a href="./kim-bu-madame-salice.html">KİM BU MADAME SALICE?</a>
+    <a href="./#contact">BİZE ULAŞ!</a>
+  </nav>
+
+  <main>
+    <section class="story-hero">
+      <div class="eyebrow">Madame Salice'nin dünyası</div>
+      <h1>Bir hisle başladı.<br>Bir dünyaya dönüştü.</h1>
+      <p class="intro">
+        Güzelliğin ayrıntılarda saklı olduğuna, el emeğinin bir ruh taşıdığına
+        ve seçtiğimiz her şeyin bizi biraz daha anlattığına inanıyoruz.
+      </p>
+    </section>
+
+    <article class="story-content">
+      <h2>Madame Salice kimdir?</h2>
+      <p>
+        Madame Salice, yalnızca güzel şeyler seçmek değil; onlara anlam,
+        duygu ve karakter katmak fikrinden doğdu. Bir kumaşın dokusunda,
+        bir aksesuarın küçük ayrıntısında, bir evin sıcak köşesinde
+        kendini gösteren o özel hissin peşindeyiz.
+      </p>
+      <p>
+        Bazen bir mekânı güzelleştiren bir dokunuş, bazen elde özenle
+        hazırlanan bir parça, bazen de insanın kendine ayırdığı küçük bir
+        an… Bizim için her biri kişisel bir hikâyenin parçası.
+      </p>
+
+      <div class="quote">
+        Libera · Forte · Vera
+      </div>
+
+      <h2>Özgür. Güçlü. Gerçek.</h2>
+      <div class="values">
+        <section class="value">
+          <h3>Libera</h3>
+          <p>Kendi yolunu seçmek, kalıpların dışına çıkmak ve özgün kalmak.</p>
+        </section>
+        <section class="value">
+          <h3>Forte</h3>
+          <p>Cesaretini, karakterini ve tutkunu her ayrıntıda hissettirmek.</p>
+        </section>
+        <section class="value">
+          <h3>Vera</h3>
+          <p>İçten, samimi ve kendine sadık olmak. Gerçek olanı güzelleştirmek.</p>
+        </section>
+      </div>
+
+      <h2>Biz neye inanıyoruz?</h2>
+      <p>
+        Bir ürünün değeri yalnızca nasıl göründüğünde değil, nasıl
+        düşünüldüğünde ve nasıl hazırlandığında da saklıdır. Bu yüzden
+        estetiği sıcaklıkla, zarafeti samimiyetle, tutkuyu incelikle
+        buluşturmak istiyoruz.
+      </p>
+      <p>
+        Madame Salice dünyasında her ayrıntının bir nedeni, her seçimin
+        bir duygusu ve her hikâyenin kendine özgü bir tonu var.
+      </p>
+
+      <div class="quote">
+        Kendini anlatmanın en güzel yolu, sana gerçekten ait olanı seçmektir.
+      </div>
+
+      <div style="text-align:center">
+        <a class="back-link" href="./#collections">MADAME SALICE DÜNYASINI KEŞFET →</a>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    Madame Salice · Libera · Forte · Vera
+  </footer>
+</body>
+</html>
