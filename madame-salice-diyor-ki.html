@@ -1,1 +1,538 @@
 
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madame Salice Diyor Ki | Madame Salice</title>
+
+  <link rel="icon" type="image/png" href="./bordo%20logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #f5efe5;
+      --paper: #fffaf2;
+      --burgundy: #590f1c;
+      --gold: #b6975b;
+      --ink: #604c3d;
+      --line: rgba(182, 151, 91, 0.55);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    /* ÜST ALAN */
+
+    .site-header {
+      position: relative;
+      z-index: 20;
+      background: var(--cream);
+      border-bottom: 1px solid #d9c8ad;
+    }
+
+    .brand-area {
+      min-height: 145px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+    }
+
+    .brand-logo {
+      display: block;
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px 27px;
+      padding: 13px 22px;
+      border-top: 1px solid #d9c8ad;
+      background: rgba(245, 239, 229, 0.97);
+    }
+
+    .main-nav a {
+      color: var(--burgundy);
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: "Montserrat", sans-serif;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 1.2px;
+      white-space: nowrap;
+      transition: opacity 0.2s ease;
+    }
+
+    .main-nav a:hover {
+      opacity: 0.55;
+    }
+
+    /* MÜZİK */
+
+    .music-button {
+      position: fixed;
+      top: 15px;
+      right: 16px;
+      z-index: 100;
+      border: 1px solid var(--gold);
+      border-radius: 30px;
+      padding: 11px 16px;
+      background: var(--burgundy);
+      color: var(--paper);
+      font-family: "Montserrat", sans-serif;
+      font-size: 10px;
+      cursor: pointer;
+    }
+
+    .music-button:hover {
+      background: #741c2b;
+    }
+
+    /* TAM SAYFA ARKA PLAN */
+
+    .page-background {
+      position: relative;
+      isolation: isolate;
+      min-height: 100vh;
+      background-color: var(--cream);
+      background-image:
+        linear-gradient(
+          rgba(245, 239, 229, 0.38),
+          rgba(245, 239, 229, 0.38)
+        ),
+        url("./madame-salice-diyor-ki-arka-plan.png");
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      padding-bottom: 1px;
+    }
+
+    /* BAŞLIK */
+
+    .hero {
+      text-align: center;
+      padding: 35px 18px 24px;
+      background: rgba(245, 239, 229, 0.66);
+      border-bottom: 1px solid rgba(182, 151, 91, 0.35);
+    }
+
+    .eyebrow {
+      font-family: "Montserrat", sans-serif;
+      font-size: 9px;
+      letter-spacing: 4px;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .hero h1 {
+      font-size: clamp(34px, 4vw, 52px);
+      font-weight: 500;
+      line-height: 1.1;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      margin-bottom: 8px;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(16px, 1.6vw, 20px);
+      font-style: italic;
+      line-height: 1.4;
+      color: #725542;
+    }
+
+    .hero-divider {
+      margin-top: 12px;
+      color: var(--gold);
+      font-size: 17px;
+      letter-spacing: 7px;
+    }
+
+    /* YAZI ARŞİVİ */
+
+    .archive-area {
+      width: 100%;
+      max-width: 1750px;
+      margin: 0 auto;
+      padding: 22px 2.5% 40px;
+    }
+
+    .archive-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 9px;
+    }
+
+    .article-card {
+      display: grid;
+      grid-template-columns: 78px minmax(0, 1fr);
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+      min-height: 82px;
+      padding: 7px;
+      background: rgba(255, 250, 242, 0.94);
+      border: 1px solid var(--line);
+      text-decoration: none;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .article-card:hover {
+      background: rgba(255, 250, 242, 0.99);
+      border-color: var(--gold);
+    }
+
+    .article-card img {
+      display: block;
+      width: 78px;
+      height: 66px;
+      object-fit: cover;
+      background: #e7d7bf;
+    }
+
+    .article-copy {
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 7px;
+    }
+
+    .article-title {
+      min-width: 0;
+      color: var(--burgundy);
+      font-size: clamp(15px, 1.15vw, 19px);
+      font-weight: 500;
+      line-height: 1.2;
+      overflow-wrap: anywhere;
+    }
+
+    .article-arrow {
+      flex-shrink: 0;
+      color: var(--gold);
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      transition: transform 0.2s ease;
+    }
+
+    .article-card:hover .article-arrow {
+      transform: translateX(3px);
+    }
+
+    /* ALT BUTON */
+
+    .discover-area {
+      padding: 12px 20px 48px;
+      text-align: center;
+      background: rgba(245, 239, 229, 0.48);
+    }
+
+    .discover-ornament {
+      color: var(--gold);
+      font-size: 20px;
+      letter-spacing: 9px;
+      margin-bottom: 15px;
+    }
+
+    .discover-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      max-width: 100%;
+      padding: 17px 27px;
+      border: 1px solid var(--gold);
+      background: rgba(255, 250, 242, 0.95);
+      color: var(--burgundy);
+      text-decoration: none;
+      font-family: "Montserrat", sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 1.8px;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+
+    .discover-button:hover {
+      background: var(--burgundy);
+      color: var(--paper);
+    }
+
+    .discover-button span {
+      font-size: 18px;
+    }
+
+    .site-footer {
+      padding: 18px;
+      text-align: center;
+      border-top: 1px solid #d9c8ad;
+      background: var(--cream);
+      color: #8d7863;
+      font-family: "Montserrat", sans-serif;
+      font-size: 9px;
+      letter-spacing: 2px;
+    }
+
+    /* TABLET */
+
+    @media (max-width: 1050px) {
+      .archive-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .archive-area {
+        padding-left: 2%;
+        padding-right: 2%;
+      }
+
+      .article-card {
+        grid-template-columns: 70px minmax(0, 1fr);
+        gap: 10px;
+      }
+
+      .article-card img {
+        width: 70px;
+        height: 60px;
+      }
+
+      .article-title {
+        font-size: 16px;
+      }
+    }
+
+    /* TELEFON */
+
+    @media (max-width: 620px) {
+      .brand-area {
+        min-height: 145px;
+      }
+
+      .brand-logo {
+        width: 125px;
+        height: 125px;
+      }
+
+      .main-nav {
+        gap: 13px 17px;
+        padding: 14px 10px;
+      }
+
+      .main-nav a {
+        font-size: 8px;
+        letter-spacing: 0.8px;
+      }
+
+      .music-button {
+        top: 8px;
+        right: 8px;
+        padding: 9px 11px;
+        font-size: 9px;
+      }
+
+      .hero {
+        padding: 28px 14px 20px;
+      }
+
+      .hero h1 {
+        font-size: clamp(28px, 8vw, 40px);
+      }
+
+      .hero-subtitle {
+        font-size: 16px;
+      }
+
+      .archive-area {
+        padding: 12px 10px 26px;
+      }
+
+      .archive-grid {
+        grid-template-columns: 1fr;
+        gap: 7px;
+      }
+
+      .article-card {
+        grid-template-columns: 68px minmax(0, 1fr);
+        min-height: 76px;
+        gap: 10px;
+        padding: 6px;
+      }
+
+      .article-card img {
+        width: 68px;
+        height: 62px;
+      }
+
+      .article-title {
+        font-size: 17px;
+      }
+
+      .discover-area {
+        padding: 12px 12px 35px;
+      }
+
+      .discover-button {
+        padding: 15px 16px;
+        gap: 10px;
+        font-size: 9px;
+        letter-spacing: 1px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="brand-area">
+      <a href="./index.html" aria-label="Madame Salice ana sayfa">
+        <img class="brand-logo" src="./bordo%20logo.png" alt="Madame Salice">
+      </a>
+    </div>
+
+    <nav class="main-nav" aria-label="Ana menü">
+      <a href="./index.html">Home</a>
+      <a href="./index.html#maison">Maison</a>
+      <a href="./index.html#atelier">Atelier</a>
+      <a href="./madame-salice-diyor-ki.html" aria-current="page">Madame Salice Diyor Ki</a>
+      <a href="./marka-felsefemiz.html">Marka Felsefemiz</a>
+      <a href="./index.html#who">Kim Bu Madame Salice?</a>
+      <a href="./index.html#contact">Bize Ulaş!</a>
+    </nav>
+  </header>
+
+  <audio id="madameMusic" loop preload="auto">
+    <source src="./madame-salice-ambience.mp3" type="audio/mpeg">
+  </audio>
+
+  <button class="music-button" id="musicToggle" type="button"
+    aria-label="Arka plan müziğini başlat veya durdur">
+    ♫ Müziği başlat
+  </button>
+
+  <main class="page-background">
+
+    <section class="hero">
+      <p class="eyebrow">MADAME SALICE · NOTLAR</p>
+      <h1>Madame Salice Diyor Ki</h1>
+      <p class="hero-subtitle">Küçük notlar, büyük hisler, gerçek hikâyeler.</p>
+      <div class="hero-divider">— ✳ —</div>
+    </section>
+
+    <section class="archive-area" aria-label="Yazı arşivi">
+      <div class="archive-grid">
+
+        <a class="article-card" href="#yazi-01"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">Yeni Bir Başlangıç Üzerine</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-02"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">Yavaşlamayı Hatırlamak</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-03"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">Ev, Sadece Bir Mekân mı?</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-04"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">Küçük Ritüeller, Büyük Etki</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-05"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">Renklerin Dili</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-06"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">İlham Her Yerde</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-07"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">Kendinle Kalabilmek</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-08"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">Zamansız Parçalar</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-09"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">Bir Fincan Sessizlik</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-10"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">Küçük Şeylerin Güzelliği</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-11"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">Bir Rengin Hatırlattıkları</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-12"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">Kendine Ait Bir Köşe</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-13"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">Gündelik Hayata Şefkat</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-14"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">Hatıraların Renkleri</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-15"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">Yavaş Bir Pazar</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-16"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">Bir Masanın Etrafında</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-17"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">Sadeleşmek Üzerine</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-18"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">Küçük Bir Cesaret</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-19"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">Eşyaların Hikâyesi</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-20"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">Kendine Dönmek</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-21"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">Günün İçindeki Güzellik</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-22"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">Bir Mektup Gibi</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-23"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">Dinginliğin İzinde</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-24"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">Bir Çiçeğin Öğrettikleri</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-25"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">İnce Düşünmenin Hâli</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-26"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">Küçük Bir Gelenek</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-27"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">Evdeki Küçük Mutluluklar</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-28"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">Zamanın İçinden</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-29"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">Biraz Daha Hafif</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-30"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">Güzel Şeylere Yer Açmak</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-31"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">Bir Anın Kıymeti</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-32"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">İçten Gelen Bir Dokunuş</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-33"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">Kendine Zaman Ayırmak</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-34"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">Güzelliğin Sessiz Hâli</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-35"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">Bir Şeylere Yeniden Başlamak</span><span class="article-arrow">→</span></span></a>
+        <a class="article-card" href="#yazi-36"><img src="./madame-salice-diyor-ki-arka-plan.png" alt=""><span class="article-copy"><span class="article-title">Hayatın Küçük Detayları</span><span class="article-arrow">→</span></span></a>
+
+      </div>
+    </section>
+
+    <section class="discover-area">
+      <div class="discover-ornament">— ✳ —</div>
+      <a class="discover-button" href="./index.html">
+        MADAME SALICE DÜNYASINI KEŞFET
+        <span aria-hidden="true">→</span>
+      </a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    MADAME SALICE · LIBERA · FORTE · VERA
+  </footer>
+
+  <script>
+    const music = document.getElementById("madameMusic");
+    const musicToggle = document.getElementById("musicToggle");
+
+    music.volume = 0.22;
+
+    musicToggle.addEventListener("click", async () => {
+      if (music.paused) {
+        try {
+          await music.play();
+          musicToggle.textContent = "♫ Müziği durdur";
+        } catch (error) {
+          musicToggle.textContent = "♫ Tekrar dene";
+        }
+      } else {
+        music.pause();
+        musicToggle.textContent = "♫ Müziği başlat";
+      }
+    });
+  </script>
+
+</body>
+</html>
