@@ -117,23 +117,25 @@
 
     /* TAM SAYFA ARKA PLAN */
 
-    .page-background {
-      position: relative;
-      isolation: isolate;
-      min-height: 100vh;
-      background-color: var(--cream);
-      background-image:
-        linear-gradient(
-          rgba(245, 239, 229, 0.38),
-          rgba(245, 239, 229, 0.38)
-        ),
-        url("./madame-salice-diyor-ki-arka-plan.png");
-      background-position: center top;
-      background-repeat: no-repeat;
-      background-size: 100% auto;
-      background-attachment: scroll;
-      padding-bottom: 1px;
-    }
+  
+.page-background {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  background-color: #f5efe5;
+  padding-bottom: 1px;
+}
+
+.page-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url("./madame-salice-diyor-ki-arka-plan.png");
+  background-position: center top;
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+}
 
     /* BAŞLIK */
 
