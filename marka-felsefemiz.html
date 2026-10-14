@@ -283,6 +283,49 @@
   }
 }
 
+.site-header {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  background: #f5efe5;
+  border-top: 1px solid rgba(89, 15, 28, 0.18);
+  border-bottom: 1px solid rgba(89, 15, 28, 0.25);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  padding: 18px 24px;
+}
+
+.main-nav a {
+  color: #590f1c;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.main-nav a:hover,
+.main-nav a[aria-current="page"] {
+  color: #b6975b;
+}
+
+@media (max-width: 768px) {
+  .main-nav {
+    gap: 14px 18px;
+    padding: 16px 12px;
+  }
+
+  .main-nav a {
+    font-size: 10px;
+  }
+}
+
   </style>
 </head>
 
@@ -301,6 +344,18 @@
     aria-pressed="false">
     ♫ Müziği başlat
   </button>
+
+<header class="site-header">
+  <nav class="main-nav" aria-label="Ana menü">
+    <a href="./index.html#home">HOME</a>
+    <a href="./index.html#maison">MAISON</a>
+    <a href="./index.html#atelier">ATELIER</a>
+    <a href="./madame-salice-diyor-ki.html">MADAME SALICE DİYOR Kİ</a>
+    <a href="./kim-bu-madame-salice.html">KİM BU MADAME SALICE?</a>
+    <a href="./marka-felsefemiz.html" aria-current="page">MARKA FELSEFEMİZ</a>
+    <a href="./index.html#contact">BİZE ULAŞ!</a>
+  </nav>
+</header>
 
   <main class="page">
 
