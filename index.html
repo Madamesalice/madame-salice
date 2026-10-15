@@ -506,13 +506,23 @@
     gap: 7px;
   }
 
-  .collections .card img,
-  .details .card img {
+  
+.collections .card img,
+.details .card img {
+    display: block;
+    width: 100%;
     height: 95px;
-    min-height: 0;
+    min-height: 95px;
+    object-fit: cover;
+    padding: 0;
+    background: var(--paper);
+}
+
+.details .card img.logo-card {
     object-fit: contain;
-    padding: 2px;
-  }
+    padding: 7px;
+}
+
 
   .details .card img.logo-card {
     object-fit: contain;
