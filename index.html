@@ -556,6 +556,27 @@
   }
 }
 
+/* MOBİL GÖRSEL DENGESİ — SON DÜZELTME */
+@media (max-width: 420px) {
+  .collections .card img,
+  .details .card img {
+    display: block !important;
+    width: 100% !important;
+    height: 95px !important;
+    min-height: 95px !important;
+    max-height: 95px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    padding: 0 !important;
+  }
+
+  .details .card img.logo-card {
+    object-fit: contain !important;
+    padding: 7px !important;
+    background: var(--paper) !important;
+  }
+}
+
   </style>
 </head>
 
