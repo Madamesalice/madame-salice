@@ -565,7 +565,7 @@
 
     function openArticle(article, index) {
       document.getElementById("readerNumber").textContent =
-        "MADAME SALICE · NOT " + String(index + 1).padStart(2, "0");
+        "MADAME SALICE ·  " + String(index + 1).padStart(2, "0");
 
       document.getElementById("readerTitle").textContent = article.baslik;
       document.getElementById("readerDate").textContent = textValue(article.tarih);
@@ -640,7 +640,7 @@
 
         const number = document.createElement("span");
         number.className = "article-number";
-        number.textContent = "NOT " + String(index + 1).padStart(2, "0");
+        number.textContent = " " + String(index + 1).padStart(2, "0");
 
         const title = document.createElement("span");
         title.className = "article-title";
