@@ -422,66 +422,82 @@
       .footer-main { grid-template-columns: 1fr; }
       .newsletter { grid-column: auto; }
     }
-    
-/* MADAME SALICE — yalnızca iki kart bölümünün mobil düzeni */
+
+/* MOBİL KARTLAR — görsel üstte, metin altta */
 @media (max-width: 760px) {
   .collections .card-grid,
   .details .card-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 10px;
+    align-items: stretch;
   }
 
   .collections .card,
   .details .card {
+    display: flex;
+    flex-direction: column;
     min-width: 0;
-    grid-template-columns: 38% minmax(0, 62%);
+    height: 100%;
   }
 
   .collections .card img,
   .details .card img {
+    display: block;
     width: 100%;
-    min-width: 0;
-    height: 100%;
-    min-height: 130px;
-    object-fit: cover;
+    height: 115px;
+    min-height: 0;
+    object-fit: contain;
+    background: var(--paper);
+    padding: 3px;
+  }
+
+  .details .card img.logo-card {
+    object-fit: contain;
+    padding: 8px;
   }
 
   .collections .card-copy,
   .details .card-copy {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     min-width: 0;
     padding: 9px 7px;
   }
 
   .collections .card h2,
   .details .card h2 {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.25;
     letter-spacing: 0;
     overflow-wrap: anywhere;
+    margin: 0 0 7px;
   }
 
   .collections .card p,
   .details .card p {
+    font-size: 12px;
+    line-height: 1.35;
     min-height: 0;
-    margin: 8px 0;
-    font-size: 13px;
-    line-height: 1.3;
+    margin: 0 0 10px;
     overflow-wrap: anywhere;
   }
 
   .collections .text-link,
   .details .text-link {
     font-size: 8px;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+    margin-top: auto;
+    padding-top: 8px;
+    align-self: flex-start;
   }
 }
 
-/* Küçük telefonlar */
 @media (max-width: 420px) {
   .collections,
   .details {
-    padding-left: 2%;
-    padding-right: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
   }
 
   .collections .card-grid,
@@ -490,54 +506,43 @@
     gap: 7px;
   }
 
-  .collections .card,
-  .details .card {
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-  }
-
   .collections .card img,
   .details .card img {
-    width: 100%;
-    height: 76px;
+    height: 95px;
     min-height: 0;
-    object-fit: cover;
+    object-fit: contain;
+    padding: 2px;
   }
 
   .details .card img.logo-card {
     object-fit: contain;
-    padding: 4px;
+    padding: 7px;
   }
 
   .collections .card-copy,
   .details .card-copy {
-    padding: 7px 6px;
-    min-width: 0;
+    padding: 7px 5px;
   }
 
   .collections .card h2,
   .details .card h2 {
     font-size: 11px;
     line-height: 1.3;
-    letter-spacing: 0;
-    overflow-wrap: anywhere;
-    margin-bottom: 7px;
+    margin-bottom: 6px;
   }
 
   .collections .card p,
   .details .card p {
-    font-size: 11px;
+    font-size: 10px;
     line-height: 1.35;
-    margin: 5px 0;
-    overflow-wrap: anywhere;
+    margin-bottom: 8px;
   }
 
   .collections .text-link,
   .details .text-link {
-    font-size: 8px;
-    letter-spacing: 0.5px;
-    margin-top: 5px;
+    font-size: 7px;
+    letter-spacing: 0.3px;
+    padding-top: 6px;
   }
 }
 
